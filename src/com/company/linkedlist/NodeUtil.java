@@ -16,8 +16,6 @@ public class NodeUtil {
         }
         return temp;
     }
-
-
      static void print(Node newHeadHashSet) {
         StringBuilder sb = new StringBuilder();
         while (newHeadHashSet !=null){
