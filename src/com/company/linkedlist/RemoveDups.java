@@ -9,22 +9,13 @@ import java.util.Set;
 public class RemoveDups {
 
     public static void main(String... args){
-        Node head = createLinkedList();
+        Node head = NodeUtil.createLinkedList(new int[]{3,5,2,5,4,1,1,2});
      //  Node newHeadHashSet = removeDuplicateHashSet(head);
       // print(newHeadHashSet);
        Node newHead = removeDuplicate(head);
-        print(newHead);
+       NodeUtil.print(newHead);
     }
 
-    private static void print(Node newHeadHashSet) {
-        StringBuilder sb = new StringBuilder();
-        while (newHeadHashSet !=null){
-            sb.append(newHeadHashSet.val).append("->");
-            newHeadHashSet = newHeadHashSet.next;
-        }
-        sb.replace(sb.length()-2,sb.length(),"");
-        System.out.println(sb.toString());
-    }
 
     private static Node removeDuplicateHashSet(Node head) {
         if(head == null){
@@ -62,30 +53,8 @@ public class RemoveDups {
         return head;
     }
 
-    private static Node createLinkedList() {
-        Node n = new Node(3);
-        n.next = new Node(5);
-        n.next.next = new Node(2);
-        n.next.next.next = new Node(5);
-        n.next.next.next.next = new Node(4);
-        n.next.next.next.next.next = new Node(1);
-        n.next.next.next.next.next.next = new Node(1);
-        n.next.next.next.next.next.next.next = new Node(2);
-
-        return n;
-    }
-
 }
 
-class Node {
-    int val;
-    Node next;
-
-    public Node(int val){
-        this.val = val;
-    }
-
-}
 
 
 
